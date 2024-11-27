@@ -9,7 +9,7 @@ An AI-powered yoga trainer web application designed to classify yoga poses, prov
 ### Getting Started:  
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-repo-link.git  
+   git clone https://github.com/anmolkhurana490/Yoga-Posture-Recognition-and-Correction-System.git  
    cd AI-Yoga-Trainer  
    ```  
 
