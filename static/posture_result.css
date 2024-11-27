@@ -23,12 +23,18 @@ body::before {
 
 header {
     padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 header .logo {
     margin: 0;
     font-family: 'Brush Script MT', cursive;
     font-size: 40px;
+}
+
+.logout-btn {
+    align-self: center;
 }
 
 .container {

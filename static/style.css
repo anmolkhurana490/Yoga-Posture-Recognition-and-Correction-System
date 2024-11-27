@@ -65,6 +65,29 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    font-size: 2rem;
+}
+
+.command-btn {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.command-btn:hover {
+    background-color: #01017e;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .content {

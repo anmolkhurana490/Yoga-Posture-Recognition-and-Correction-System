@@ -9,9 +9,11 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 
-# Initialize SQLite database
+# SQLite database for User Authentication
+userdb_path = 'data/users.db'
+
 def init_db():
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(userdb_path)
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS users (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -98,8 +100,6 @@ def home():
     # if 'username' not in session:
     #     return redirect(url_for('login'))
     # return render_template('index.html', username=session['username'])
-    session["recent_poses"] = []
-    session["current_pose_num"] = None
     return render_template('index.html')
 
 # Trying another Posture
@@ -134,7 +134,7 @@ def signup():
 
         # Insert new user into the database
         try:
-            conn = sqlite3.connect('users.db')
+            conn = sqlite3.connect(userdb_path)
             cursor = conn.cursor()
             cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
             conn.commit()
@@ -154,7 +154,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect(userdb_path)
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
         user = cursor.fetchone()
@@ -162,7 +162,7 @@ def login():
 
         if user:
             session['username'] = username
-            return redirect(url_for('home'))
+            return redirect(url_for('get_started'))
         else:
             flash('Invalid username or password', 'danger')
 
@@ -173,13 +173,15 @@ def login():
 def logout():
     session.pop('username', None)
     flash('You have been logged out.', 'success')
-    return redirect(url_for('login'))
+    return redirect(url_for('home'))
 
 # Check Posture
-@app.route('/check_posture', methods=['GET'])
-def check_posture():
-    # if 'username' not in session:
-    #     return redirect(url_for('login'))
+@app.route('/get_started', methods=['GET'])
+def get_started():
+    session["recent_poses"] = []
+    session["current_pose_num"] = None
+    if 'username' not in session or not session['username']:
+        return redirect(url_for('login'))
     return render_template('posture_result.html');
 
 if __name__ == '__main__':
