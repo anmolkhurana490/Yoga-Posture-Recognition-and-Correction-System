@@ -1,4 +1,4 @@
-# AI Yoga Trainer: Pose Recognition and Correction System 🧘‍♂️🤖  
+# AI Yoga Trainer: Yoga Posture Recognition and Correction System 🧘‍♂️🤖  
 An AI-powered yoga trainer web application designed to classify yoga poses, provide accuracy scores, and suggest pose corrections in real-time. The app leverages **MediaPipe** for body keypoint extraction and **deep learning models** for pose recognition and correction. It ensures an interactive user experience through a seamless interface for live video or uploaded files.
 
 ### Features:  
