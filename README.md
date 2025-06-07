@@ -1,29 +1,62 @@
-# AI Yoga Trainer: Yoga Posture Recognition and Correction System 🧘‍♂️🤖  
-An AI-powered yoga trainer web application designed to classify yoga poses, provide accuracy scores, and suggest pose corrections in real-time. The app leverages **MediaPipe** for body keypoint extraction and **deep learning models** for pose recognition and correction. It ensures an interactive user experience through a seamless interface for live video or uploaded files.
+# 🧘‍♂️ AI Yoga Trainer – Yoga Pose Recognition and Correction System
 
-### Features:  
-- Real-time yoga pose recognition and accuracy feedback.  
-- Pose correction with detailed keypoint suggestions.  
-- User-friendly interface for live video analysis or file uploads.  
+A deep learning-based Yoga Trainer that recognizes and corrects Yoga poses in real-time using computer vision and body landmark detection frameworks like MediaPipe.
 
-### Getting Started:  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/anmolkhurana490/Yoga-Posture-Recognition-and-Correction-System.git  
-   cd AI-Yoga-Trainer  
-   ```  
+## 🌟 Features
 
-2. Install the required dependencies:  
-   ```bash  
-   pip install -r requirements.txt  
-   ```  
+- 🎯 **Yoga Posture Prediction**: Predicts from 82 different Yogasana classes using a trained deep learning model.
+- 🧩 **Pose Correction (WIP)**: Compares user landmarks to ideal posture for improvement suggestions.
+- ⏱️ **Real-Time Feedback**: Provides instant accuracy and text feedback on the user’s yoga posture.
+- 🖥️ **Interactive User Interface**: Webcam integration, image/video uploads, audio & text feedback.
 
-3. Run the application:  
-   ```bash  
-   python app.py  
-   ```  
-   This initializes the project and starts the server. Open your browser and navigate to `http://127.0.0.1:5000` to access the application.
+## 🛠 Tech Stack
 
---- 
+- Python, Flask
+- TensorFlow / Keras
+- MediaPipe
+- OpenCV
+- HTML/CSS/JS (for frontend)
 
-Feel free to tweak this description to fit your specific project details! Let me know if you'd like help customizing it further.
+## 🚀 Getting Started
+
+### 🔧 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/anmolkhurana490/Yoga-Posture-Recognition-and-Correction-System.git
+   cd Yoga-Posture-Recognition-and-Correction-System
+   ```
+
+2. Create a virtual environment (optional):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the app:
+   ```bash
+   python app.py
+   Visit http://localhost:5000 in your browser.
+   ```
+
+# 📷 Demo (Coming Soon)
+
+# 📌 Project Status
+- ✅ Yoga Posture Prediction
+- ✅ User Interface
+- 🛠️ Pose Correction Module (in progress)
+- 🛠️ Feedback Mechanism (in progress)
+
+# 🤝 Contribution
+We welcome contributions to enhance this project. See CONTRIBUTING.md for details.
+
+# 📄 License
+This project is licensed under the MIT License.
+
+# 👏 Acknowledgements
+Special thanks to all contributors for their efforts and support!
