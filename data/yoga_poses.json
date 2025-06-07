@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     { "sanskrit_name": "Akarna Dhanurasana", "english_name": "Archer Pose" },
     { "sanskrit_name": "Bharadvajasana I", "english_name": "Bharadvaja's Twist Pose" },
@@ -82,7 +81,6 @@
     { "sanskrit_name": "Camatkarasana", "english_name": "Wild Thing Pose" },
     { "sanskrit_name": "Pawanmuktasana", "english_name": "Wind Relieving Pose" },
     { "sanskrit_name": "Yoga Nidrasana", "english_name": "Yogic Sleep Pose" }
-=======
 [
     { "sanskrit_name": "Akarna Dhanurasana", "english_name": "Archer Pose" },
     { "sanskrit_name": "Bharadvajasana I", "english_name": "Bharadvaja's Twist Pose" },
@@ -166,5 +164,4 @@
     { "sanskrit_name": "Camatkarasana", "english_name": "Wild Thing Pose" },
     { "sanskrit_name": "Pawanmuktasana", "english_name": "Wind Relieving Pose" },
     { "sanskrit_name": "Yoga Nidrasana", "english_name": "Yogic Sleep Pose" }
->>>>>>> 05992ff7e32145a539c93fe1f22efdb9c8e4905e
 ]

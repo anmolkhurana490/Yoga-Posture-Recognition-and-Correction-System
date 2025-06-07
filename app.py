@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 import utils # contains our all model processing tasks and other utilities
 import sqlite3  # SQLite for user database
@@ -187,7 +186,6 @@ def get_started():
 
 if __name__ == '__main__':
     app.run(debug=True)
-=======
 from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 import utils # contains our all model processing tasks and other utilities
 import sqlite3  # SQLite for user database
@@ -376,4 +374,3 @@ def get_started():
 
 if __name__ == '__main__':
     app.run(debug=True)
->>>>>>> 05992ff7e32145a539c93fe1f22efdb9c8e4905e

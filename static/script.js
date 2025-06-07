@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Constants and Configuration
 const VIDEO_INTERVAL = 350; // interval for capturing frames in milliseconds
 const RESULT_INTERVAL = 10000; // interval for giving text results (pose prediction, feedback)
@@ -283,7 +282,6 @@ function startListening(voice_button) {
 
 document.addEventListener('DOMContentLoaded', () => {
     initEventListeners();
-=======
 // Constants and Configuration
 const VIDEO_INTERVAL = 350; // interval for capturing frames in milliseconds
 const RESULT_INTERVAL = 10000; // interval for giving text results (pose prediction, feedback)
@@ -568,5 +566,4 @@ function startListening(voice_button) {
 
 document.addEventListener('DOMContentLoaded', () => {
     initEventListeners();
->>>>>>> 05992ff7e32145a539c93fe1f22efdb9c8e4905e
 })

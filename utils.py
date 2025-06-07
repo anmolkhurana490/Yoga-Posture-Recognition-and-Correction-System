@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import cv2
 import numpy as np
 import mediapipe as mp
@@ -63,7 +62,6 @@ def model_predict_pose(data_batch):
 
 def read_file(filePath):
     with open(filePath, 'r') as file:
-=======
 import cv2
 import numpy as np
 import mediapipe as mp
@@ -128,5 +126,4 @@ def model_predict_pose(data_batch):
 
 def read_file(filePath):
     with open(filePath, 'r') as file:
->>>>>>> 05992ff7e32145a539c93fe1f22efdb9c8e4905e
         return file.read()
