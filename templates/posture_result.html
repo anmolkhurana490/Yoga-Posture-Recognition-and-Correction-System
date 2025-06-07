@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Check Result</title>
+    <link rel="stylesheet" href="/static/posture_result.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">DORIGHT</h1>
+        <a href="/logout" class="logout-btn command-btn">Logout</a>
+    </header>
+    <div class="container">
+        <h1>Begin Your Pose: Get Real-Time Alignment and Correction for Perfect Practice</h1>
+
+        <!-- Display the uploaded image or video -->
+        <div class="main-container">
+            <div class="media-container">
+                <video class="video-display">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="/static/images/yoga-video.jpg" class="processed_video_img">
+                <div class="spinner-box">
+                    <div class="spinner" id="video-spinner"></div>
+                </div>
+                <form class="posture-media-upload">
+                    <button id="webcam-btn" class="command-btn">Use Webcam</button>
+                    <label for="posture-media-input">Upload Your Posture Video/Image</label>
+                    <input type="file" name="posture-media-input" accept="video/*,image/*">
+                </form>
+            </div>
+
+            <div class="feedback-box">
+                <div class="posture-predicted">
+                    Posture Predicted: <span id="posture-name"></span>
+                    <button id="confirm-pose-btn" class="command-btn" disabled>Confirm</button>
+                </div>
+                <span class="accuracy-box">
+                    Posture Accuracy: 100%
+                </span>
+                <p>Great job! Your posture is correct. Keep it up! Your posture needs improvement. Try adjusting your
+                    alignment and try again.</p>
+            </div>
+        </div>
+
+        <!-- Display the result message -->
+        <div class="command-box">
+            <!-- Option to go back and check another posture -->
+            <div class="btn-container">
+                <button id="wait-btn" class="command-btn">Wait</button>
+                <button id="continue-btn" class="command-btn">Continue</button>
+                <button id="next-posture-btn" class="command-btn">Try Another Posture</button>
+            </div>
+            <div class="posture-input-container">
+                <input type="text" placeholder="Which Yoga Posture do you want to try? Type Here..."
+                    class="posture-command-input">
+                <div class="voice-input-box">
+                    <button id="voice-input-btn" class="command-btn"></button>
+                    <div id="voice-listening"></div>
+                </div>
+                <button id="command-submit-btn" class="command-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

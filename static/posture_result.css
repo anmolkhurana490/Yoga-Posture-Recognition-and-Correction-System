@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    background: url('/static/images/yoga-image.jpg') center;
+    /* background-size: cover; */
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin: 0;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 40px;
+}
+
+.logout-btn {
+    align-self: center;
+}
+
+.container {
+    height: 100%;
+    /* background-color:beige; */
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.container h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.video-display {
+    width: 50vw;
+    height: 55vh;
+    display: none;
+}
+
+.processed_video_img {
+    width: 50vw;
+    height: 55vh;
+    /* display: none; */
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.spinner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.spinner {
+    animation: spin 5s linear infinite normal;
+    display: none;
+}
+
+.spinner::before {
+    font-family: 'FontAwesome';
+    content: '\f013';
+    color: #007bff;
+}
+
+#video-spinner {
+    font-size: 14rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.posture-media-upload > * {
+    font-size: 16px;
+}
+
+#webcam-btn {
+    margin: 0px 16px;
+}
+
+.feedback-box {
+    padding: 5px;
+}
+
+.feedback-box > * {
+    margin: 1rem 0;
+}
+
+.posture-predicted {
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.accuracy-box {
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.command-box {
+    margin: 10px 0;
+}
+
+
+.correct {
+    color: #28a745;
+}
+
+.incorrect {
+    color: #dc3545;
+}
+
+.command-box .btn-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.command-btn {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.command-btn:not(:disabled):hover {
+    background-color: #01017e;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.command-btn:disabled {
+    background-color: #dc3545;
+}
+
+#webcam-btn::after {
+    font-family: 'FontAwesome';
+    content: '\f03d';
+    margin-left: 10px;
+}
+
+#wait-btn::after {
+    font-family: 'FontAwesome';
+    content: '\f252';
+    margin-left: 10px;
+}
+
+#continue-btn::after {
+    font-family: 'FontAwesome';
+    content: '\f04e';
+    margin-left: 10px;
+}
+
+#next-posture-btn::after {
+    font-family: 'FontAwesome';
+    content: '\f021';
+    margin-left: 10px;
+}
+
+.posture-input-container {
+    margin: 20px 10px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.posture-input-container > * {
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.posture-command-input {
+    width: 60%;
+    background-color: #f6f6c3;
+    color: blue;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+#voice-input-btn {
+    border-radius: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#voice-input-btn::before {
+    font-family: 'FontAwesome';
+    content: '\f130';
+}
+
+#voice-listening {
+    font-size: 2rem;
+    padding: 0.3rem 0.5rem;
+    display: none;
+    animation: listening 1s linear infinite alternate;
+}
+
+@keyframes listening {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#voice-listening::before {
+    font-family: 'FontAwesome';
+    content: '\f2a2';
+    color: #007bff;
+    font-weight: bold;
+}
+
+#voice-input-btn:focus {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
